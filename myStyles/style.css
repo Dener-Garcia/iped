@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+/* ============ Configuracao global - Selecao do mouse em texto cores ============ */
+
+::selection{
+    color: #eaeaea;
+    background: #4333b7;
+}
+
+body{
+    background-image: linear-gradient(25deg, #7e7e91 20%, #c3cfe2 70%);
+}
+/* ================= HEADER - CABECALHO DO SITE ================= */
+
+header .container{
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px;
+}
+
+header .container .logoM3d{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    gap: 24px;
+    color: #FFE600;
+}
+
+header .container .logoM3d svg{
+    width: 90px;
+}
+
+header .container .topMenu nav{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+header .container .topMenu nav a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #eaeaea;
+    transition: 0.5s;
+}
+
+header .container .topMenu nav a:hover{
+    text-decoration: underline 2px #d4a00a;
+    text-underline-offset: 8px;
+}
+
+header .container .topMenu nav button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #d4a00a;
+    color: #eaeaea;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+
+header .container .topMenu nav button:hover{
+    background: #4333b7;
+    color: #eaeaea;
+}
+
+header .container .topMenu nav button a:hover{
+    text-decoration: none;
+}
+
+/* ================================== MAIN - CORPO DO SITE ==================================*/
+
+main .container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px,auto));
+    padding: 21px;
+    justify-content: space-evenly;
+}
+
+main .container .dropMenu1{
+    width: 300px;
+    border-radius: 8px;
+    background: #1654f0;
+}
+
+main .container .dropMenu2{
+    width: 300px;
+    border-radius: 8px;
+    background: #ff91f0;
+
+}
+
+main .container .dropMenu3{
+    width: 300px;
+    border-radius: 8px;
+    background: #818d17;
+}
+
+main .container .dropMenu4{
+    width: 300px;
+    border-radius: 8px;
+    background: #5a5a58;
+}
+
+main .container .dropMenu5{
+    width: 300px;
+    border-radius: 8px;
+    background: #670edb;
+}
+
+main .container .dropMenu6{
+    width: 300px;
+    border-radius: 8px;
+    background: #4e130e;
+}
+
+main .container summary{
+    width: 100%;
+    cursor: pointer;
+    padding: 12px;
+}
+
+main .container summary:hover{
+    background: #7a7a7a;
+    border-radius: 8px;
+}
+
+main .container summary:focus{
+    background: #524a4a;
+    border-radius: 8px;
+}
+
+main .container ul{
+    list-style: none;
+}
+
+main .container ul li a{
+    display: flex;
+    color: #c3cfe2;
+    text-decoration: none;
+    padding: 4px;
+}
+
+main .container ul li a:hover{
+    color: #c30101;
+}
+
+main .container ul li a:focus{
+    color: #00ff2a;
+}
+
+/* #################################### FOOTER - Rodape do site configuracao #################################### */
+
+footer .container{
+    border-top: solid 0.4px #eaeaea;
+    padding: 12px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+footer .container h3{
+    text-align: center;
+    color: #eaeaea;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+footer .container .icones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    gap: 30px;
+    fill: #7a7a7a;
+}
+
+footer .container .icones .iconeLogo1 a svg{
+    width: 70px;
+    transition: 0.5s;
+}
+
+footer .container .icones .iconeLogo1 a svg:hover{
+    fill: #3F72F2;
+    transform: scale(1.2) translate(0%, -12px);
+}
+
+footer .container .icones .iconeLogo2 a svg{
+    width: 50px;
+    transition: 0.5s;
+}
+
+footer .container .icones .iconeLogo2 a svg:hover{
+    fill: #2746E6;
+    transform: scale(1.2) translate(0%, -12px);
+}
+
+footer .container .icones .iconeLogo3 a svg{
+    width: 50px;
+    transition: 0.5s;
+}
+
+footer .container .icones .iconeLogo3 a svg:hover{
+    fill: #eebb1a;
+    transform: scale(1.2) translate(0%, -12px);
+}
+
+footer .container .icones .iconeLogo4 a svg{
+    width: 70px;
+    transition: 0.5s;
+}
+
+footer .container .icones .iconeLogo4 a svg:hover{
+    fill: #c30101;
+    transform: scale(1.2) translate(0%, -12px);
+}
+
+/* #################################### Responsividade do site  telas pequenas 1280 - 769px ###################### */
+
+@media screen and (max-width: 1281px){
+    main .container{
+        justify-content: space-between;
+    }
+
+    header .container .topMenu nav a{
+        font-size: 1.2rem;
+    }
+
+    header .container .topMenu nav button{
+        font-size: 1.2rem;
+    }
+
+    main .container .menuLateral ul li a{
+        font-size: 1.2rem;
+    }
+
+    main .container .menuLateral ul li a:hover{
+        font-size: 1.8rem;
+    }
+
+    main .container .menuLateral .menuLateralAtivo{
+        font-size: 1.8rem;
+    }
+
+    main .container .tituloServicos{
+        width: 40%;
+        height: 30vh;
+        text-align: center;
+    }
+
+    main .container .tituloServicos h1{
+        font-size: 2rem;
+    }
+
+    main .container .tituloServicos h2{
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    main .container .tituloServicos .button button{
+        font-size: 1rem;   
+    }
+    
+    main .container .image{
+        margin-top: 60px;
+        position: relative;
+        width: 50%;
+    }
+
+    main .textoComplementar .textoEsquerda,
+    main .textoComplementar .textoDireita{
+        width: 500px;
+        padding: 0 10px;
+    }
+
+    main .textoComplementar .textoEsquerda h3,
+    main .textoComplementar .textoDireita h3{
+        font-size: 1.3rem;
+    }
+
+    main .textoComplementar .textoEsquerda p,
+    main .textoComplementar .textoDireita p{
+        font-size: 1.1rem;
+    }
+
+}
+
+/* ###################### Responsividade do site telas smartphone 320px - 480px e tablets 481px - 768px ###################### */
+
+@media screen and (max-width: 768px){
+    main .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .container .logoM3d{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-size: 14px;
+        gap: 4px;
+    }
+
+    header .container .topMenu nav{
+        padding: 0 8px;
+        gap: 8px;
+    }
+
+    header .container .topMenu nav a{
+        font-size: 1rem;
+    }
+
+    header .container .topMenu nav button{
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    main .container .menuLateral{
+        margin-top: 0px;
+    }
+
+    main .container .menuLateral ul{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    main .container .menuLateral ul li{
+        text-align: center;
+    }
+
+    main .container .menuLateral ul li a{
+        font-size: 0.8rem;
+    }
+    
+    main .container .menuLateral ul li a:hover{
+        color: #eaeaea;
+        font-size: 1rem;
+    }
+    
+    main .container .menuLateral .menuLateralAtivo{
+        color: #eaeaea;
+        font-size: 1rem;
+    }
+
+    main .container .tituloServicos{
+        width: auto;
+        margin-top: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .container .tituloServicos h1{
+        font-size: 1.8rem;
+    }
+
+    main .container .tituloServicos h2{
+        font-size: 1rem;
+    }
+
+    main .container .tituloServicos .button button{
+        font-size: 1.0rem;
+        padding: 8px 16px;
+    }
+
+    main .container .image{
+        margin-top: -50px;
+        width: 95%;
+    }
+
+    main .textoComplementar{
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .textoComplementar .textoEsquerda,
+    main .textoComplementar .textoDireita{
+        width: 350px;
+        padding: 12px 8px;
+    }
+
+    main .textoComplementar .textoEsquerda h3,
+    main .textoComplementar .textoDireita h3{
+        font-size: 1.5rem; 
+    }
+
+    main .textoComplementar .textoEsquerda p,
+    main .textoComplementar .textoDireita p{
+        font-size: 1.1rem; 
+    }
+
+}
