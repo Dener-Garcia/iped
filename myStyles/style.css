@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Ubuntu:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Work+Sans:wght@400;500&display=swap');
 
 *{
     margin: 0;
@@ -7,6 +6,35 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
+}
+
+/* ============ Configuracao global - Selecao do mouse em texto cores ============ */
+
+:root{
+    --fontPrimary: 'Work Sans', sans-serif;
+    --fontSecundary: 'IBM Plex Mono', monospace;
+    --colorBrandPrimary: #022B69;
+    --colorBrandSecundary: #EF7D00;
+    --colorContrastDark: #1C1C1C;
+    --colorContrastLight: #FBFBFB;
+    --colorFunctionPrimary: #2264C8;
+    --colorFunctionSecundary: #EF7D00;
+    --colorFeedbackPrimary: #0075FF;
+    --colorFeedbackSecundary: #50AF47;
+    --colorFeedbackTertiary: #FFBB00;
+    --colorTint500: #763DA9;
+    --colorTint400: #925AC4;
+    --colorTint300: #AD83D2;
+    --colorTint200: #C9ADE1;
+    --colorTint100: #E4D6F0;
+    --colorShade500: #4B266A;
+    --colorShade400: #3C1F55;
+    --colorShade300: #2D1740;
+    --colorShade200: #1E0F2A;
+    --colorShade100: #0F0815;
+    --shadowPrimary: 0px 4px 16px -4px rgba(0, 0, 0, 0.25);
+    --shadowSecundary: 0px 8px 16px -4px rgba(0, 0, 0, 0.25);
+    --shadowTertiary: 0px 12px 20px -8px rgba(0, 0, 0, 0.25);
 }
 
 /* ============ Configuracao global - Selecao do mouse em texto cores ============ */
@@ -22,7 +50,8 @@ body{
 /* ================= HEADER - CABECALHO DO SITE ================= */
 
 header .container{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -85,6 +114,7 @@ header .container .topMenu nav button a:hover{
 /* ================================== MAIN - CORPO DO SITE ==================================*/
 
 main .container{
+    font-family: 'IBM Plex Mono', monospace;
     display: grid;
     grid-template-columns: repeat(3, minmax(300px,auto));
     padding: 21px;
