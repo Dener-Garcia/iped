@@ -17,45 +17,59 @@
     --colorBrandSecundary: #EF7D00;
     --colorContrastDark: #1C1C1C;
     --colorContrastLight: #FBFBFB;
-    --colorFunctionPrimary: #2264C8;
-    --colorFunctionSecundary: #EF7D00;
-    --colorFeedbackPrimary: #0075FF;
-    --colorFeedbackSecundary: #50AF47;
-    --colorFeedbackTertiary: #FFBB00;
-    --colorTint500: #763DA9;
-    --colorTint400: #925AC4;
-    --colorTint300: #AD83D2;
-    --colorTint200: #C9ADE1;
-    --colorTint100: #E4D6F0;
-    --colorShade500: #4B266A;
-    --colorShade400: #3C1F55;
-    --colorShade300: #2D1740;
-    --colorShade200: #1E0F2A;
-    --colorShade100: #0F0815;
-    --shadowPrimary: 0px 4px 16px -4px rgba(0, 0, 0, 0.25);
-    --shadowSecundary: 0px 8px 16px -4px rgba(0, 0, 0, 0.25);
-    --shadowTertiary: 0px 12px 20px -8px rgba(0, 0, 0, 0.25);
+    --colorFunctionPrimary: #3D86F5;
+    --colorFunctionSecundary: #F59D3D;
+    --colorFeedbackInfo: #A1C3F7;
+    --colorFeedbackSuccess: #90DD88;
+    --colorFeedbackWarning: #F5F53D;
+    --colorFeedbackError: #EC9579;
+    --colorTintPrimary400: #69A3FC;
+    --colorTintPrimary300: #9BC2FD;
+    --colorTintPrimary200: #CDE0FE;
+    --colorTintPrimary100: #E6F0FF;
+    --colorTintSecundary400: #FFAF57;
+    --colorTintSecundary300: #FFC78A;
+    --colorTintSecundary200: #FFDFBD;
+    --colorTintSecundary100: #FFF8F0;
+    --colorShadePrimary400: #022458;
+    --colorShadePrimary300: #011B41;
+    --colorShadePrimary200: #011432;
+    --colorShadePrimary100: #000A19;
+    --colorShadeSecundary400: #BD6300;
+    --colorShadeSecundary300: #8A4800;
+    --colorShadeSecundary200: #572D00;
+    --colorShadeSecundary100: #241300;
+    --colorGreyScale700: #2C2C2C;
+    --colorGreyScale600: #3C3C3C;
+    --colorGreyScale500: #575757;
+    --colorGreyScale400: #707070;
+    --colorGreyScale300: #8A8A8A;
+    --colorGreyScale200: #D6D6D6;
+    --colorGreyScale100: #F0F0F0;
+    --shadowLevel1: 0px 4px 16px -4px rgba(0, 0, 0, 0.25);
+    --shadowLevel2: 0px 8px 16px -4px rgba(0, 0, 0, 0.25);
+    --shadowLevel3: 0px 12px 20px -8px rgba(0, 0, 0, 0.25);
 }
 
 /* ============ Configuracao global - Selecao do mouse em texto cores ============ */
 
 ::selection{
-    color: #eaeaea;
-    background: #4333b7;
+    color: var(--colorContrastLight);
+    background: var(--colorShadePrimary400);
 }
 
 body{
-    background-image: linear-gradient(25deg, #7e7e91 20%, #c3cfe2 70%);
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 /* ================= HEADER - CABECALHO DO SITE ================= */
 
 header .container{
-    font-family: 'Work Sans', sans-serif;
+    font-family: var(--fontPrimary);
     font-weight: 500;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 24px;
+    padding: 28px;
 }
 
 header .container .logoM3d{
@@ -64,11 +78,11 @@ header .container .logoM3d{
     font-size: 20px;
     font-weight: 500;
     gap: 24px;
-    color: #FFE600;
+    color: var(--colorShadeSecundary400);
 }
 
 header .container .logoM3d svg{
-    width: 90px;
+    width: 154px;
 }
 
 header .container .topMenu nav{
@@ -81,21 +95,20 @@ header .container .topMenu nav a{
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
-    color: #eaeaea;
+    color: var(--colorContrastDark);
     transition: 0.5s;
 }
 
 header .container .topMenu nav a:hover{
-    text-decoration: underline 2px #d4a00a;
+    text-decoration: underline 3px var(--colorFunctionSecundary);
     text-underline-offset: 8px;
 }
 
 header .container .topMenu nav button{
-    padding: 10px 20px;
+    padding: 12px 28px;
     border: none;
-    border-radius: 12px;
-    background: #d4a00a;
-    color: #eaeaea;
+    border-radius: 8px;
+    background: var(--colorFunctionPrimary);
     font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer; 
@@ -103,95 +116,139 @@ header .container .topMenu nav button{
 }
 
 header .container .topMenu nav button:hover{
-    background: #4333b7;
-    color: #eaeaea;
+    background: var(--colorFunctionSecundary);
+}
+
+header .container .topMenu nav button a{
+    color: var(--colorContrastLight);
 }
 
 header .container .topMenu nav button a:hover{
     text-decoration: none;
+    color: var(--colorContrastDark);
 }
 
 /* ================================== MAIN - CORPO DO SITE ==================================*/
 
 main .container{
-    font-family: 'IBM Plex Mono', monospace;
+    width: 100%;
+    margin: auto;
+    font-family: var(--fontSecundary);
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px,auto));
-    padding: 21px;
+    grid-template-columns: repeat(3, minmax(300px, auto));
+    padding: 68px;
     justify-content: space-evenly;
 }
 
 main .container .dropMenu1{
-    width: 300px;
+    width: auto;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+main .container .dropMenu1 .dropMenuTitle{
+    background: var(--colorGreyScale500);
+    color: var(--colorContrastLight);
+    padding: 12px 28px;
     border-radius: 8px;
-    background: #1654f0;
+    transition: 0.3s;
+}
+
+main .container .dropMenu1 .dropMenuTitle:hover{
+    background: var(--colorFunctionSecundary);
+    transform: translate(12px);
+}
+
+main .container .dropMenu1 .dropMenuSubTitle{
+    background: var(--colorGreyScale300);
+    color: var(--colorContrastLight);
+    font-size: 18px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+main .container .dropMenu1 .dropMenuSubTitle:hover{
+    background: var(--colorTintSecundary400);
+    transform: translate(8px);
+}
+
+main .container .dropMenu1 .dropMenuSubTitle:focus{
+    transform: translate(8px);
+}
+
+main .container .dropMenu1 details summary{
+    list-style: none;
+    cursor: pointer;
+}
+
+main .container .dropMenu1 ul li{
+    list-style: none;
+    padding: 8px 28px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none
+}
+
+main .container .dropMenu1 ul li a{
+    color: var(--colorContrastDark);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main .container .dropMenu1 ul li a:hover{
+    border-bottom: 2px solid;
+    color: var(--colorFunctionSecundary);   
+}
+
+main .container .dropMenu1 ul li a:focus{
+    color: var(--colorShadeSecundary400);
+}
+
+main .container .dropMenu1 .dropMenuSubTitle2{
+    background: var(--colorTintSecundary300);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 28px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+main .container .dropMenu1 .dropMenuSubTitle2:hover{
+    background: var(--colorFunctionSecundary);
 }
 
 main .container .dropMenu2{
     width: 300px;
     border-radius: 8px;
-    background: #ff91f0;
+    background: var(--colorGreyScale600);
 
 }
 
 main .container .dropMenu3{
     width: 300px;
     border-radius: 8px;
-    background: #818d17;
+    background: var(--colorGreyScale600);
 }
 
 main .container .dropMenu4{
     width: 300px;
     border-radius: 8px;
-    background: #5a5a58;
+    background: var(--colorGreyScale600);
 }
 
 main .container .dropMenu5{
     width: 300px;
     border-radius: 8px;
-    background: #670edb;
+    background: var(--colorGreyScale600);
 }
 
 main .container .dropMenu6{
     width: 300px;
     border-radius: 8px;
-    background: #4e130e;
+    background: var(--colorGreyScale600);
 }
 
-main .container summary{
-    width: 100%;
-    cursor: pointer;
-    padding: 12px;
-}
-
-main .container summary:hover{
-    background: #7a7a7a;
-    border-radius: 8px;
-}
-
-main .container summary:focus{
-    background: #524a4a;
-    border-radius: 8px;
-}
-
-main .container ul{
-    list-style: none;
-}
-
-main .container ul li a{
-    display: flex;
-    color: #c3cfe2;
-    text-decoration: none;
-    padding: 4px;
-}
-
-main .container ul li a:hover{
-    color: #c30101;
-}
-
-main .container ul li a:focus{
-    color: #00ff2a;
-}
 
 /* #################################### FOOTER - Rodape do site configuracao #################################### */
 
