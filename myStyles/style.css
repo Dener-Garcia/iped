@@ -55,7 +55,7 @@
 
 ::selection{
     color: var(--colorContrastLight);
-    background: var(--colorShadePrimary400);
+    background: var(--colorFunctionPrimary);
 }
 
 body{
@@ -69,20 +69,11 @@ header .container{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 28px;
-}
-
-header .container .logoM3d{
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 500;
-    gap: 24px;
-    color: var(--colorShadeSecundary400);
+    padding: 16px;
 }
 
 header .container .logoM3d svg{
-    width: 154px;
+    width: 94px;
 }
 
 header .container .topMenu nav{
@@ -93,14 +84,14 @@ header .container .topMenu nav{
 
 header .container .topMenu nav a{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--colorContrastDark);
     transition: 0.5s;
 }
 
 header .container .topMenu nav a:hover{
-    text-decoration: underline 3px var(--colorFunctionSecundary);
+    text-decoration: underline 2px var(--colorFunctionSecundary);
     text-underline-offset: 8px;
 }
 
@@ -131,22 +122,55 @@ header .container .topMenu nav button a:hover{
 /* ================================== MAIN - CORPO DO SITE ==================================*/
 
 main .container{
-    width: 100%;
+    width: 90%;
     margin: auto;
     font-family: var(--fontSecundary);
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, auto));
-    padding: 68px;
+    grid-template-columns: repeat(3, minmax(auto, auto));
+    gap: 16px;
+    padding: 48px;
     justify-content: space-evenly;
 }
 
-main .container .dropMenu1{
+main .container details summary{
+    list-style: none;
+    cursor: pointer;
+}
+
+main .container ul li{
+    list-style: none;
+    padding: 8px 28px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none
+}
+
+main .container ul li a{
+    color: var(--colorContrastDark);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main .container ul li a:hover{
+    border-bottom: 2px solid;
+    color: var(--colorFunctionSecundary);   
+}
+
+main .container ul li a:focus{
+    color: var(--colorShadeSecundary400);
+}
+
+main .container .dropMenu1,
+main .container .dropMenu2,
+main .container .dropMenu3{
     width: auto;
     font-size: 20px;
     font-weight: 600;
 }
 
-main .container .dropMenu1 .dropMenuTitle{
+main .container .dropMenu1 .dropMenuTitle,
+main .container .dropMenu2 .dropMenuTitle,
+main .container .dropMenu3 .dropMenuTitle{
     background: var(--colorGreyScale500);
     color: var(--colorContrastLight);
     padding: 12px 28px;
@@ -154,12 +178,22 @@ main .container .dropMenu1 .dropMenuTitle{
     transition: 0.3s;
 }
 
-main .container .dropMenu1 .dropMenuTitle:hover{
+main .container .dropMenu1 img,
+main .container .dropMenu2 img,
+main .container .dropMenu3 img{
+    width: 28px;
+}
+
+main .container .dropMenu1 .dropMenuTitle:hover,
+main .container .dropMenu2 .dropMenuTitle:hover,
+main .container .dropMenu3 .dropMenuTitle:hover{
     background: var(--colorFunctionSecundary);
     transform: translate(12px);
 }
 
-main .container .dropMenu1 .dropMenuSubTitle{
+main .container .dropMenu1 .dropMenuSubTitle,
+main .container .dropMenu2 .dropMenuSubTitle,
+main .container .dropMenu3 .dropMenuSubTitle{
     background: var(--colorGreyScale300);
     color: var(--colorContrastLight);
     font-size: 18px;
@@ -168,44 +202,22 @@ main .container .dropMenu1 .dropMenuSubTitle{
     transition: 0.3s;
 }
 
-main .container .dropMenu1 .dropMenuSubTitle:hover{
+main .container .dropMenu1 .dropMenuSubTitle:hover,
+main .container .dropMenu2 .dropMenuSubTitle:hover,
+main .container .dropMenu3 .dropMenuSubTitle:hover{
     background: var(--colorTintSecundary400);
     transform: translate(8px);
 }
 
-main .container .dropMenu1 .dropMenuSubTitle:focus{
+main .container .dropMenu1 .dropMenuSubTitle:focus,
+main .container .dropMenu2 .dropMenuSubTitle:focus,
+main .container .dropMenu3 .dropMenuSubTitle:focus{
     transform: translate(8px);
 }
 
-main .container .dropMenu1 details summary{
-    list-style: none;
-    cursor: pointer;
-}
-
-main .container .dropMenu1 ul li{
-    list-style: none;
-    padding: 8px 28px;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none
-}
-
-main .container .dropMenu1 ul li a{
-    color: var(--colorContrastDark);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-main .container .dropMenu1 ul li a:hover{
-    border-bottom: 2px solid;
-    color: var(--colorFunctionSecundary);   
-}
-
-main .container .dropMenu1 ul li a:focus{
-    color: var(--colorShadeSecundary400);
-}
-
-main .container .dropMenu1 .dropMenuSubTitle2{
+main .container .dropMenu1 .dropMenuSubTitle2,
+main .container .dropMenu2 .dropMenuSubTitle2,
+main .container .dropMenu3 .dropMenuSubTitle2{
     background: var(--colorTintSecundary300);
     font-size: 18px;
     font-weight: 500;
@@ -214,22 +226,14 @@ main .container .dropMenu1 .dropMenuSubTitle2{
     transition: 0.3s;
 }
 
-main .container .dropMenu1 .dropMenuSubTitle2:hover{
+main .container .dropMenu1 .dropMenuSubTitle2:hover,
+main .container .dropMenu2 .dropMenuSubTitle2:hover,
+main .container .dropMenu3 .dropMenuSubTitle3:hover{
     background: var(--colorFunctionSecundary);
 }
 
-main .container .dropMenu2{
-    width: 300px;
-    border-radius: 8px;
-    background: var(--colorGreyScale600);
 
-}
 
-main .container .dropMenu3{
-    width: 300px;
-    border-radius: 8px;
-    background: var(--colorGreyScale600);
-}
 
 main .container .dropMenu4{
     width: 300px;
@@ -317,89 +321,25 @@ footer .container .icones .iconeLogo4 a svg:hover{
 
 /* #################################### Responsividade do site  telas pequenas 1280 - 769px ###################### */
 
-@media screen and (max-width: 1281px){
+@media screen and (max-width: 1080px){
+
     main .container{
-        justify-content: space-between;
-    }
-
-    header .container .topMenu nav a{
-        font-size: 1.2rem;
-    }
-
-    header .container .topMenu nav button{
-        font-size: 1.2rem;
-    }
-
-    main .container .menuLateral ul li a{
-        font-size: 1.2rem;
-    }
-
-    main .container .menuLateral ul li a:hover{
-        font-size: 1.8rem;
-    }
-
-    main .container .menuLateral .menuLateralAtivo{
-        font-size: 1.8rem;
-    }
-
-    main .container .tituloServicos{
-        width: 40%;
-        height: 30vh;
-        text-align: center;
-    }
-
-    main .container .tituloServicos h1{
-        font-size: 2rem;
-    }
-
-    main .container .tituloServicos h2{
-        font-size: 1.3rem;
-        font-weight: 500;
-    }
-
-    main .container .tituloServicos .button button{
-        font-size: 1rem;   
-    }
-    
-    main .container .image{
-        margin-top: 60px;
-        position: relative;
-        width: 50%;
-    }
-
-    main .textoComplementar .textoEsquerda,
-    main .textoComplementar .textoDireita{
-        width: 500px;
-        padding: 0 10px;
-    }
-
-    main .textoComplementar .textoEsquerda h3,
-    main .textoComplementar .textoDireita h3{
-        font-size: 1.3rem;
-    }
-
-    main .textoComplementar .textoEsquerda p,
-    main .textoComplementar .textoDireita p{
-        font-size: 1.1rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 
 }
 
 /* ###################### Responsividade do site telas smartphone 320px - 480px e tablets 481px - 768px ###################### */
 
-@media screen and (max-width: 768px){
-    main .container{
+@media screen and (max-width: 798px){
+
+    header .container{
         flex-direction: column;
-        align-items: center;
     }
 
-    header .container .logoM3d{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        font-size: 14px;
-        gap: 4px;
+    header .container .logoM3d svg{
+        width: 128px;
     }
 
     header .container .topMenu nav{
@@ -408,88 +348,18 @@ footer .container .icones .iconeLogo4 a svg:hover{
     }
 
     header .container .topMenu nav a{
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     header .container .topMenu nav button{
-        font-size: 1rem;
-        padding: 8px 12px;
-    }
-
-    main .container .menuLateral{
-        margin-top: 0px;
-    }
-
-    main .container .menuLateral ul{
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    main .container .menuLateral ul li{
-        text-align: center;
-    }
-
-    main .container .menuLateral ul li a{
-        font-size: 0.8rem;
-    }
-    
-    main .container .menuLateral ul li a:hover{
-        color: #eaeaea;
-        font-size: 1rem;
-    }
-    
-    main .container .menuLateral .menuLateralAtivo{
-        color: #eaeaea;
-        font-size: 1rem;
-    }
-
-    main .container .tituloServicos{
-        width: auto;
-        margin-top: 0px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main .container .tituloServicos h1{
-        font-size: 1.8rem;
-    }
-
-    main .container .tituloServicos h2{
-        font-size: 1rem;
-    }
-
-    main .container .tituloServicos .button button{
-        font-size: 1.0rem;
+        font-size: 1.1rem;
         padding: 8px 16px;
     }
 
-    main .container .image{
-        margin-top: -50px;
+    main .container{
         width: 95%;
-    }
-
-    main .textoComplementar{
-        text-align: center;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    main .textoComplementar .textoEsquerda,
-    main .textoComplementar .textoDireita{
-        width: 350px;
-        padding: 12px 8px;
-    }
-
-    main .textoComplementar .textoEsquerda h3,
-    main .textoComplementar .textoDireita h3{
-        font-size: 1.5rem; 
-    }
-
-    main .textoComplementar .textoEsquerda p,
-    main .textoComplementar .textoDireita p{
-        font-size: 1.1rem; 
     }
 
 }
